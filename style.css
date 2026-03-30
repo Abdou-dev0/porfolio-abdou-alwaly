@@ -1,0 +1,325 @@
+/* VARIABLES */
+:root {
+    --primary-color: #4070F4;
+    --title-color: #1A2437;
+    --text-color: #707070;
+    --body-color: #FBFEFD;
+    --header-height: 3.5rem;
+}
+
+/* BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--body-color); color: var(--text-color); }
+ul { list-style: none; }
+a { text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: 1024px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 4rem 0 2rem; }
+.section-title { font-size: 2rem; color: var(--primary-color); margin-bottom: 2.5rem; text-align: center; position: relative; }
+.section-title::after { content: ''; position: absolute; width: 50px; height: 4px; background-color: var(--primary-color); bottom: -10px; left: 0; right: 0; margin: auto; }
+
+/* ========== HEADER & NAV ========== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+.nav {
+    height: var(--header-height); /* Assure-toi que cette variable est définie dans :root */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    color: var(--title-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none; /* Enlève les points de la liste */
+    margin: 0;
+    padding: 0;
+}
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; /* Ligne invisible pour éviter le saut */
+    
+}
+.nav__link.active {
+    border-bottom-color: #4470f1;
+    font-weight: 700;
+}
+.nav__link:hover{
+    color: #4470f1;
+}
+
+
+/* HOME */
+.home { height: 100vh; display: flex; align-items: center; }
+.home__container { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 0.5rem; width: 100%;}
+.home__title { font-size: 3rem; color: var(--title-color); line-height: 1.2; }
+.home__title span { color: var(--primary-color); }
+.home__img-box {
+    width: 400px;
+    height: 450px;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    overflow: hidden;
+    margin-left: 5rem;
+}
+.home__img-box img { width: 100%; height: 100%; object-fit: cover; }
+.home__data {margin-right: 4rem;}
+.home__social { display: flex; gap: 2.5rem; margin-top: 4rem; font-size: 1.5rem; }
+.home__social a { color: var(--title-color); transition: .3s; }
+.home__social a:hover { color: var(--primary-color); }
+
+/* Style du bouton Contact */
+.contact-button-container {
+    margin-top: 30px; /* Espace au-dessus du bouton */
+}
+
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Espace entre l'icône et le texte */
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #13121b, #4470f1); 
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem; /* Taille de texte confortable */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    border-radius: 8px; /* Bords arrondis */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+.btn-contact:hover {
+    background: linear-gradient(135deg, #13121b, #043dda); 
+    transform: translateY(-3px); /* Petit effet de saut vers le haut */
+}
+
+.cta-container {
+    display: flex;
+    gap: 20px; /* Crée l'espace entre les boutons */
+    margin-top: 30px;
+    justify-content: start; /* Aligne à gauche comme sur ton image */
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #13121b, #4470f1); 
+    color: white;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #13121b, #4470f1); 
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #13121b, #043dda);
+}
+
+/* ABOUT */
+.about__container { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.about__img img { border-radius: .5rem; width: 400px; justify-self: center; }
+.about__subtitle { color: var(--title-color); margin-bottom: 1rem;}
+.about__description {color: black; font-size: 17px;}
+
+/* SKILLS */
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes comme sur l'image */
+    gap: 1.5rem;
+}
+
+.services__card {
+    /* Le dégradé orange/corail de ton image */
+    background: linear-gradient(135deg, #13121b, #4470f1); 
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    text-align: center; /* Tout le contenu est centré */
+    transition: transform .3s;
+    color: #fff;
+}
+
+.services__card:hover {
+    transform: translateY(-10px); /* Petit effet au survol */
+    background: linear-gradient(135deg, #13121b, #043dda);
+}
+
+.services__icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff; /* Icônes en blanc */
+}
+
+.services__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9); /* Texte légèrement transparent pour la lisibilité */
+}
+
+/* Responsive : 2 colonnes sur tablette, 1 sur mobile */
+@media screen and (max-width: 992px) {
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Works */
+.work__container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.work__img { border-radius: .5rem; overflow: hidden; box-shadow: 0 4px 25px rgba(14, 36, 49, .15); transition: .3s; }
+.work__img:hover { transform: translateY(-5px); }
+
+/* ========== CONTACT ========== */
+.contact__container {
+    row-gap: 3rem;
+    justify-items: center;
+}
+.contact__description {
+    text-align: center;
+    font-size: var(--normal-font-size);
+    color: black;
+    margin-bottom: 2rem;
+    max-width: 400px; /* Pour éviter que la phrase soit trop longue sur une seule ligne */
+}
+
+.contact__form {
+    width: 100%;
+    max-width: 450px;
+    display: grid;
+    row-gap: 3rem;
+}
+
+.contact__inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+}
+
+.contact__input {
+    width: 100%;
+    background-color: #f0f1f3;
+    color: #333;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+    outline: none;
+    transition: .3s;
+}
+
+.contact__input:focus {
+    border: 2px solid #4470f1;
+    background-color: transparent;
+}
+
+textarea.contact__input {
+    resize: none;
+}
+
+.contact__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact__button {
+    display: inline-block;
+    background: linear-gradient(135deg, #13121b, #4470f1);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact__button:hover {
+    background: linear-gradient(135deg, #13121b, #043dda);;
+    box-shadow: 0 8px 24px rgba(68, 112, 241, 0.2);
+    transform: translateY(-10px);
+}
+
+.contact__message {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    transition: .3s;
+}
+
+.color-blue {
+    color: #4470f1;
+}
+
+.color-red {
+    color: #e74c3c;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+    background-color:rgb(13, 5, 31);
+    padding: 2rem 0 3rem;
+}
+
+
+.footer__title {
+    font-size: var(--h1-font-size);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.footer__social { display: flex; gap: 2.5rem; margin-top: 4rem; font-size: 1.5rem; justify-content: center; }
+.footer__social a { color: white; transition: .3s; }
+.footer__social a:hover { color: var(--primary-color); }
+
+.footer__copy {
+    font-size: .75rem;
+    color: #777;
+    margin-top: 2rem;
+    display: block;
+}
+
+/* Mobile & Tablette */
+@media screen and (max-width: 992px) {
+    .services__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .services__container {
+        grid-template-columns: 1fr;
+    }
+}
