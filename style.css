@@ -311,15 +311,3 @@ textarea.contact__input {
     display: block;
 }
 
-/* Mobile & Tablette */
-@media screen and (max-width: 992px) {
-    .services__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .services__container {
-        grid-template-columns: 1fr;
-    }
-}
