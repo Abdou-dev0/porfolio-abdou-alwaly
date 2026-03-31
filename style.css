@@ -311,3 +311,80 @@ textarea.contact__input {
     display: block;
 }
 
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media screen and (max-width: 768px) {
+    /* 1. Global */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* 2. Navigation - Pour éviter que ça chevauche le logo */
+    .nav__list {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* 3. Accueil (Home) */
+    .home {
+        height: auto;
+        padding: 6rem 0 2rem;
+    }
+
+    .home__container {
+        grid-template-columns: 1fr; /* Force une seule colonne */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .home__title {
+        font-size: 1.8rem; /* Plus petit pour mobile */
+    }
+
+    .home__data {
+        margin-right: 0;
+    }
+
+    .home__img-box {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto; /* Centre l'image */
+        order: -1; /* Optionnel : met l'image AU-DESSUS du texte sur mobile */
+    }
+
+    .home__social, .contact-button-container {
+        justify-content: center;
+    }
+
+    /* 4. À Propos (About) */
+    .about__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about__img img {
+        width: 260px;
+        margin: 0 auto 2rem;
+    }
+
+    .cta-container {
+        flex-direction: column; /* Boutons l'un sur l'autre */
+        align-items: center;
+    }
+
+    /* 5. Compétences (Skills) */
+    .services__container {
+        grid-template-columns: 1fr; /* Une carte par ligne */
+    }
+
+    /* 6. Projets (Work) - CORRECTION IMAGE MINISCULE */
+    .work__container {
+        grid-template-columns: 1fr; /* Une image par ligne */
+        gap: 1.5rem;
+    }
+
+    /* 7. Contact */
+    .contact__form {
+        max-width: 100%;
+    }
+}
