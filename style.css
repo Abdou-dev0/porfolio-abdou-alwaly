@@ -66,6 +66,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav__link:hover{
     color: #4470f1;
 }
+/* Cache le bouton menu mon ordinateur */
+.nav__toggle {
+    display: none;
+}
 
 
 /* HOME */
@@ -182,18 +186,6 @@ img { max-width: 100%; height: auto; display: block; }
     color: rgba(255, 255, 255, 0.9); /* Texte légèrement transparent pour la lisibilité */
 }
 
-/* Responsive : 2 colonnes sur tablette, 1 sur mobile */
-@media screen and (max-width: 992px) {
-    .services__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .services__container {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* Works */
 .work__container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
@@ -320,9 +312,26 @@ textarea.contact__input {
     }
 
     /* 2. Navigation - Pour éviter que ça chevauche le logo */
-    .nav__list {
-        gap: 1rem;
-        font-size: 0.8rem;
+   .nav__menu {
+        position: fixed;
+        top: -100%; /* Cache le menu en haut */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 2rem;
+        transition: .4s;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    .nav__toggle {
+        display: block; /* L'icône apparaît ici */
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--title-color);
+    }
+    
+    /* Classe pour afficher le menu quand on clique */
+    .nav__menu.show-menu {
+        top: var(--header-height);
     }
 
     /* 3. Accueil (Home) */

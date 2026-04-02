@@ -144,7 +144,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.classList.add('active');
             });
         });
+    
+        /*Pour afficher le menu dans un telephone ou tablette*/
+    const navToggle = document.getElementById('nav-toggle'),
+      navMenu = document.querySelector('.nav__menu');
 
+        if(navToggle){
+            navToggle.addEventListener('click', () =>{
+                navMenu.classList.toggle('show-menu');
+            })
+        }
     
     
     /* On attend que le DOM soit prêt pour éviter l'erreur 'null' */
