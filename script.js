@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         Rigoureux et curieux, je m'efforce de produire un code propre et optimisé. Mon objectif est de transformer des idées complexes en solutions web simples, rapides et esthétiques pour répondre aux besoins des utilisateurs.
                     </p>
                     <div class="cta-container">
-                        <a href="chemin/vers/ton-cv.pdf" class="btn btn-primary">Télécharger mon CV</a>
+                        <a href="images/CV_Abdou_Khadre_Alwaly_Ndiaye.pdf" download="CV_Abdou_Ndiaye.pdf" class="btn btn-primary">Télécharger mon CV</a>
                         <a href="https://github.com/Abdou-dev0" target="_blank" class="btn btn-secondary">
                             <i class="fa-brands fa-github"></i> Mon GitHub
                         </a>
