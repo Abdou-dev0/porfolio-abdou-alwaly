@@ -53,49 +53,49 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="services__container container grid">
                 <div class="services__card">
                     <i class='bx bx-code-alt services__icon'></i>
-                    <h3 class="services__title">Software Development</h3>
+                    <h3 class="services__title">Langages</h3>
                     <p class="services__description">
-                        Expertise en JAVA, PYTHON, PHP et C pour des solutions logicielles robustes.
+                        Maîtrise des fondamentaux du web avec HTML5 et CSS3, ainsi que la programmation dynamique avec JavaScript (ES6+), PHP et Python.
                     </p>
                 </div>
 
                 <div class="services__card">
                     <i class='bx bx-layout services__icon'></i>
-                    <h3 class="services__title">Website Design</h3>
+                    <h3 class="services__title">Design</h3>
                     <p class="services__description">
-                        Création de sites modernes avec HTML5/CSS3, JAVASCRIPT et WordPress.
+                        Conception d'interfaces modernes et esthétiques utilisant Tailwind CSS, avec une approche systématique du Responsive Design pour tous les écrans.
                     </p>
                 </div>
 
                 <div class="services__card">
                     <i class='bx bx-mobile-alt services__icon'></i>
-                    <h3 class="services__title">Mobile Development</h3>
+                    <h3 class="services__title">Frameworks & Librairies</h3>
                     <p class="services__description">
-                        Développement d'applications mobiles natives via Android Studio.
+                         Développement d'applications web performantes et scalables avec React et Next.js.
                     </p>
                 </div>
 
                 <div class="services__card">
                     <i class='bx bx-data services__icon'></i>
-                    <h3 class="services__title">Database Solutions</h3>
+                    <h3 class="services__title">Systèmes (SGBD)</h3>
                     <p class="services__description">
-                        Gestion et optimisation de bases de données MySQL, Oracle et Access.
+                        Conception, gestion et optimisation de bases de données relationnelles avec MySQL, Oracle et Access.
                     </p>
                 </div>
 
                 <div class="services__card">
                     <i class='bx bx-server services__icon'></i>
-                    <h3 class="services__title">Systems & Network</h3>
+                    <h3 class="services__title">Gestion de version</h3>
                     <p class="services__description">
-                        Administration Windows/Linux et simulation Cisco Packet Tracer.
+                        Utilisation quotidienne de Git et GitHub pour le suivi du code et la collaboration sur des projets.
                     </p>
                 </div>
 
                 <div class="services__card">
                     <i class='bx bx-bar-chart-alt services__icon'></i>
-                    <h3 class="services__title">Digital Tools</h3>
+                    <h3 class="services__title">Déploiement & Services</h3>
                     <p class="services__description">
-                        Maîtrise de la suite Office (Excel, Word) et gestion de projet.
+                        Mise en ligne de projets via Vercel et intégration de services tiers comme Formspree pour les fonctionnalités de contact.
                     </p>
                 </div>
             </div>
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </p>
                 <form action="https://formspree.io/f/xwvnjnre" method="POST" class="contact__form" id="contact-form">
                     <div class="contact__inputs">
-                        <input type="text" name="name" id="nom" placeholder="Nom" class="contact__input" required>
-                        <input type="email" name="email" id="email" placeholder="Email" class="contact__input" required>
+                        <input type="text" name="name" id="nom" placeholder="Nom Et Prenom" class="contact__input" required>
+                        <input type="email" name="email" id="email" placeholder="Votre Email" class="contact__input" required>
                     </div>
                     <textarea name="message" id="message" cols="0" rows="7" placeholder="Message" class="contact__input" required></textarea>
                     
