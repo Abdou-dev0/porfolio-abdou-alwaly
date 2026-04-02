@@ -311,27 +311,36 @@ textarea.contact__input {
         padding: 0 1rem;
     }
 
-    /* 2. Navigation - Pour éviter que ça chevauche le logo */
-   .nav__menu {
+    /* 2. Navigation - Menu Vertical */
+    .nav__menu {
         position: fixed;
-        top: -100%; /* Cache le menu en haut */
+        top: -100%; /* Caché au-dessus de l'écran */
         left: 0;
         width: 100%;
-        background-color: #fff;
-        padding: 2rem;
+        background-color: var(--body-color);
+        padding: 3rem 0 2rem;
         transition: .4s;
         box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        z-index: 100;
     }
+
+    /* Cette classe sera ajoutée par ton JavaScript au clic */
+    .nav__menu.show-menu {
+        top: var(--header-height);
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column; /* Aligne les liens verticalement */
+        align-items: center;    /* Centre les liens au milieu */
+        gap: 2rem;              /* Espace entre les liens */
+    }
+
     .nav__toggle {
-        display: block; /* L'icône apparaît ici */
+        display: block; 
         font-size: 1.5rem;
         cursor: pointer;
         color: var(--title-color);
-    }
-    
-    /* Classe pour afficher le menu quand on clique */
-    .nav__menu.show-menu {
-        top: var(--header-height);
     }
 
     /* 3. Accueil (Home) */
