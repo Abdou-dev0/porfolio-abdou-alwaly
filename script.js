@@ -176,11 +176,11 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    contactMessage.textContent = "Message envoyé avec succès ! ✅";
+                    contactMessage.textContent = "Message envoyé avec succès !";
                     contactForm.reset();
                     setTimeout(() => { contactMessage.textContent = ""; }, 5000);
                 } else {
-                    contactMessage.textContent = "Erreur lors de l'envoi ❌";
+                    contactMessage.textContent = "Erreur lors de l'envoi !";
                     contactMessage.classList.replace('color-blue', 'color-red');
                 }
             })
