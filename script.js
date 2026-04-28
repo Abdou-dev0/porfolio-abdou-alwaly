@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <section class="work section container" id="work">
                 <h2 class="section-title">Projets</h2>
                 <div class="work__container">
-                <div class="work__img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300" alt="Project"></div>
+                <div class="work__img"><a href="https://ken-style.vercel.app/"><img src="images/Projet_KenStyle.png" alt="Project"></a></div>
                 <div class="work__img"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=300" alt="Project"></div>
                 <div class="work__img"><img src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?w=300" alt="Project"></div>
             </div>
